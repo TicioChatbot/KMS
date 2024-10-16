@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Asuntos Urgentes</h1>
+<ul>
+    {% for file in urgent_files %}
+    <li class="urgent">{{ file['name'] }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

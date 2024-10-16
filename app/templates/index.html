@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Documentos en Google Drive</h1>
+<ul class="document-list">
+    {% for file in files %}
+    <li class="document-item">{{ file['name'] }}</li>
+    {% endfor %}
+</ul>
+<form action="{{ url_for('upload_document') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Subir Documento</button>
+</form>
+{% endblock %}

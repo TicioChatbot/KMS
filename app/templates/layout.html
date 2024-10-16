@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Documentos</a></li>
+                <li><a href="{{ url_for('projects') }}">Proyectos</a></li>
+                <li><a href="{{ url_for('urgent_matters') }}">Urgente</a></li>
+                <li><a href="{{ url_for('logout') }}">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>© 2024 Knowledge Management System</p>
+    </footer>
+</body>
+</html>
